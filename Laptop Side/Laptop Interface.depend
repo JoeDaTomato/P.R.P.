@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1485182997 source:c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\laptop side\dcmotor.cpp
+	"DcMotor.h"
+
+1485184053 c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\laptop side\dcmotor.h
+
+1485195694 source:c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\laptop side\main.cpp
+	<iostream>
+	<fstream>
+	"global.hpp"
+	"regester.hpp"
+
+1485183122 source:c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\laptop side\opmode.cpp
+	"OpMode.h"
+
+1487395945 c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\laptop side\opmode.h
+	<vector>
+	<string>
+	<ctype.h>
+
+1485195409 source:c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\laptop side\hardware\dcmotor.cpp
+	"DcMotor.h"
+
+1485195409 c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\laptop side\hardware\dcmotor.h
+
+1485195762 c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\laptop side\global.hpp
+	<vector>
+	<string>
+
+1485195694 c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\laptop side\regester.hpp
+
