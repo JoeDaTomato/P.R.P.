@@ -22,71 +22,181 @@ class Telemetry
 public:
     Telemetry();
     virtual ~Telemetry();
-    inline void addData(const char* lable, float data) // Adds data to Telemetry
+    inline bool addData(const char* label, float data) // Adds data to Telemetry
     {
-        m_dataLabels.push_back(lable);
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            if (m_dataLabels[i] == label)
+            {
+                m_data[i] = &data;
+                m_dataType[i] = FLOAT;
+                return true;
+            }
+        }
+        m_dataLabels.push_back(label);
         m_data.push_back(&data);
         m_dataType.push_back(FLOAT);
+        return false;
     }
-    inline void addData(const char* lable, double data) // Overridden function
+    inline bool addData(const char* label, double data) // Overridden function
     {
-        m_dataLabels.push_back(lable);
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            if (m_dataLabels[i] == label)
+            {
+                m_data[i] = &data;
+                m_dataType[i] = DOUBLE;
+                return true;
+            }
+        }
+        m_dataLabels.push_back(label);
         m_data.push_back(&data);
         m_dataType.push_back(DOUBLE);
+        return false;
     }
-    inline void addData(const char* lable, int data) // Overridden function
+    inline bool addData(const char* label, int data) // Overridden function
     {
-        m_dataLabels.push_back(lable);
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            if (m_dataLabels[i] == label)
+            {
+                m_data[i] = &data;
+                m_dataType[i] = INT;
+                return true;
+            }
+        }
+        m_dataLabels.push_back(label);
         m_data.push_back(&data);
         m_dataType.push_back(INT);
+        return false;
     }
-    inline void addData(const char* lable, unsigned int data) // Overridden function
+    inline bool addData(const char* label, unsigned int data) // Overridden function
     {
-        m_dataLabels.push_back(lable);
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            if (m_dataLabels[i] == label)
+            {
+                m_data[i] = &data;
+                m_dataType[i] = UINT;
+                return true;
+            }
+        }
+        m_dataLabels.push_back(label);
         m_data.push_back(&data);
         m_dataType.push_back(UINT);
+        return false;
     }
-    inline void addData(const char* lable, char data) // Overridden function
+    inline bool addData(const char* label, char data) // Overridden function
     {
-        m_dataLabels.push_back(lable);
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            if (m_dataLabels[i] == label)
+            {
+                m_data[i] = &data;
+                m_dataType[i] = CHAR;
+                return true;
+            }
+        }
+        m_dataLabels.push_back(label);
         m_data.push_back(&data);
         m_dataType.push_back(CHAR);
+        return true;
     }
-    inline void addData(const char* lable, unsigned char data) // Overridden function
+    inline bool addData(const char* label, unsigned char data) // Overridden function
     {
-        m_dataLabels.push_back(lable);
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            if (m_dataLabels[i] == label)
+            {
+                m_data[i] = &data;
+                m_dataType[i] = UCHAR;
+                return true;
+            }
+        }
+        m_dataLabels.push_back(label);
         m_data.push_back(&data);
         m_dataType.push_back(UCHAR);
+        return false;
     }
-    inline void addData(const char* lable, long data) // Overridden function
+    inline bool addData(const char* label, long data) // Overridden function
     {
-        m_dataLabels.push_back(lable);
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            if (m_dataLabels[i] == label)
+            {
+                m_data[i] = &data;
+                m_dataType[i] = LONG;
+                return true;
+            }
+        }
+        m_dataLabels.push_back(label);
         m_data.push_back(&data);
         m_dataType.push_back(LONG);
+        return false;
     }
-    inline void addData(const char* lable, unsigned long data) // Overridden function
+    inline bool addData(const char* label, unsigned long data) // Overridden function
     {
-        m_dataLabels.push_back(lable);
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            if (m_dataLabels[i] == label)
+            {
+                m_data[i] = &data;
+                m_dataType[i] = ULONG;
+                return true;
+            }
+        }
+        m_dataLabels.push_back(label);
         m_data.push_back(&data);
         m_dataType.push_back(ULONG);
+        return false;
     }
-    inline void addData(const char* lable, bool data) // Overridden function
+    inline bool addData(const char* label, bool data) // Overridden function
     {
-        m_dataLabels.push_back(lable);
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            if (m_dataLabels[i] == label)
+            {
+                m_data[i] = &data;
+                m_dataType[i] = BOOL;
+                return true;
+            }
+        }
+        m_dataLabels.push_back(label);
         m_data.push_back(&data);
         m_dataType.push_back(BOOL);
+        return false;
     }
-    inline void addData(const char* lable, char* data) // Overridden function
+    inline bool addData(const char* label, char* data) // Overridden function
     {
-        m_dataLabels.push_back(lable);
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            if (m_dataLabels[i] == label)
+            {
+                m_data[i] = &data;
+                m_dataType[i] = CSTR;
+                return true;
+            }
+        }
+        m_dataLabels.push_back(label);
         m_data.push_back(&data);
         m_dataType.push_back(CSTR);
+        return false;
     }
-    inline void addData(const char* lable, const char* data) // Overridden function
+    inline bool addData(const char* label, const char* data) // Overridden function
     {
-        m_dataLabels.push_back(lable);
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            if (m_dataLabels[i] == label)
+            {
+                m_data[i] = &data;
+                m_dataType[i] = CSTR;
+                return true;
+            }
+        }
+        m_dataLabels.push_back(label);
         m_data.push_back(&data);
         m_dataType.push_back(CSTR);
+        return false;
     }
     inline bool clearData() // Clears data
     {
@@ -95,11 +205,11 @@ public:
         m_dataType.clear();
         return (!m_dataLabels.size() || !m_data.size() || !m_dataType.size()); // Returns if all vectors are empty
     }
-    inline void* getData(const char* lable) // Returns the data from telemetry.
+    inline void* getData(const char* label) // Returns the data from telemetry.
     {
         for (unsigned int i = 0; i < m_dataLabels.size(); i++)
         {
-            if (m_dataLabels[i] == lable) return m_data[i];
+            if (m_dataLabels[i] == label) return m_data[i];
         }
         return nullptr;
     }
