@@ -9,12 +9,3 @@ OpMode::~OpMode()
 {
     //dtor
 }
-
-OpMode::Telemetry::Telemetry()
-{
-
-}
-OpMode::Telemetry::~Telemetry()
-{
-
-}

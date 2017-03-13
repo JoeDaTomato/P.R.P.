@@ -1,13 +1,21 @@
 # depslib dependency file v1.0
-1488224380 source:c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\raspberry pi side\main.cpp
+1489370763 source:c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\raspberry pi side\main.cpp
 	<fstream>
 	<vector>
 	<ctime>
 
-1488224333 source:c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\raspberry pi side\teamcode\opmode.cpp
+1489370796 source:c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\raspberry pi side\teamcode\opmode.cpp
 	"OpMode.h"
 
-1488224997 c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\raspberry pi side\teamcode\opmode.h
+1489370808 c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\raspberry pi side\teamcode\opmode.h
 	<vector>
+	<ctime>
 	<string>
+	"OpModeClasses/Telemetry.h"
+
+1489373175 c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\raspberry pi side\teamcode\opmodeclasses\telemetry.h
+	<vector>
+
+1489370728 source:c:\users\josep\documents\code\c++\ftc laptop to raspberry pi\raspberry pi side\teamcode\opmodeclasses\telemetry.cpp
+	"Telemetry.h"
 
