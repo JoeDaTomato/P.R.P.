@@ -3,6 +3,8 @@
 
 #include <vector>
 
+#include "../../Packet Manager.h"
+
 enum Data_Type // Declares enum for holding datatypes.
 {
     FLOAT, // float
@@ -215,12 +217,22 @@ public:
     }
     inline void update() // Transmits data
     {
-        // Add data to next outgoing packet
+        std::vector<char> data;
+        for (unsigned int i = 0; i < m_dataLabels.size(); i++)
+        {
+            for (unsigned int j = 0; j < m_dataLabels[i].size(); j++)
+            {
+                data.push_back(m_dataLabels[i][j]);
+            }
+
+        }
+        packetManager.addToPacket(data, 0, true);
     }
 protected:
 
 private:
-    std::vector<const char *> m_dataLabels; // Store labels
+    PacketManager packetManager;
+    std::vector<std::string> m_dataLabels; // Store labels
     std::vector<void*> m_data; // Stores data
     std::vector<Data_Type> m_dataType; // Stores datatypes
 };

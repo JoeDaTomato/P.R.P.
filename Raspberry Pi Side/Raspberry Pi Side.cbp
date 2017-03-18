@@ -15,6 +15,7 @@
 					<Add option="-g" />
 					<Add directory="TeamCode" />
 					<Add directory="TeamCode/OpModeClasses" />
+					<Add directory="../Raspberry Pi Side" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -26,6 +27,7 @@
 					<Add option="-O2" />
 					<Add directory="TeamCode" />
 					<Add directory="TeamCode/OpModeClasses" />
+					<Add directory="../Raspberry Pi Side" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,6 +38,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Packet Manager.cpp" />
+		<Unit filename="Packet Manager.h" />
 		<Unit filename="TeamCode/OpMode.cpp" />
 		<Unit filename="TeamCode/OpMode.h" />
 		<Unit filename="TeamCode/OpModeClasses/Telemetry.cpp" />
